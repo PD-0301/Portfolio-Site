@@ -2,11 +2,11 @@
 <nav class="header-menu">
     <ul id="sidemenu" class="menu-list txt5">
         {% if page.layout == "work" %}
-            <li id="homemenu" class="menu-link-cover"><a class="menu-links" href="{{site.url}}" onclick="closemenu()">Home</a></li>
+            <li id="homemenu" class="menu-link-cover"><a class="menu-links" href="{{site.baseurl}}" onclick="closemenu()">Home</a></li>
         {% endif %}
-        <li class="menu-link-cover"><a class="menu-links" href="{{site.url}}/#myworks" onclick="closemenu()">Works</a></li>
-        <li class="menu-link-cover"><a class="menu-links" href="{{site.url}}/#about" onclick="closemenu()">About</a></li>
-        <li style="padding-right: 0;"><button class="resume-btn"><a class="menu-links resume-lnk" href="{{site.url}}/assets/resume/your_resume.pdf" target="_blank">Résumé</a></button></li>
+        <li class="menu-link-cover"><a class="menu-links" href="{{site.baseurl}}/#myworks" onclick="closemenu()">Works</a></li>
+        <li class="menu-link-cover"><a class="menu-links" href="{{site.baseurl}}/#about" onclick="closemenu()">About</a></li>
+        <li style="padding-right: 0;"><button class="resume-btn"><a class="menu-links resume-lnk" href="{{site.baseurl}}/assets/resume/your_resume.pdf" target="_blank">Résumé</a></button></li>
         <i class='bx ham-close bx-x' onclick="closemenu()"></i>
     </ul>
     <i class='bx ham-open bx-menu' onclick="openmenu()"></i>
