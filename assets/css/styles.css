@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:100%;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+/*--------- root styles ----------------*/
+
+:root {
+    /* --gradient: linear-gradient(104.05deg, rgba(90, 121, 213, 0.624).31%, rgba(31, 89, 236, 0.196) 28.63%, rgba(122, 142, 221, 0.192)60.87%, rgba(255, 255, 255, 0) 100%); */
+    --gradient: linear-gradient(104.05deg, rgba(0, 255, 157, 0.624).31%, rgba(31, 236, 164, 0.196) 28.63%, rgba(122, 221, 175, 0.192) 60.87%, rgba(255, 255, 255, 0) 100%);
+    --contrast: #DA6092;
+    --secondary-text-color: #60DAA8;
+    --menu-background: #00ff91;
+
+}
+
+/*--------- Reusable styles ---------*/
+
+.wrapper1{
+    padding: 50px 100px;
+}
+.herowrapper{
+    padding: 200px 100px 50px;
+}
+.workwrapper{
+    flex: 1;
+    margin: 150px 250px 75px;
+}
+.defaultpage{
+    margin: 150px auto 75px;
+}
+
+/*-------- Text styles -------------*/
+
+.txt1{
+    color: #252525;
+    font-size: 350%;
+    line-height: 150%;
+    font-weight:500;
+}
+.txt2 {
+    color: #000;
+    font-size: 200%;
+    line-height: 150%;
+    font-weight: 500;
+}
+.txt4{
+    color: #000000;
+    font-size: 120%;
+    line-height: 150%;
+    font-weight: 500;
+}
+.txt5{
+    color: #000000;
+    font-size: 120%;
+    line-height: 125%;
+    font-weight: 400;
+}
+
+.txt6{
+    color: #252525;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+/*------------- Header styles -------------*/
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 100px;
+    top: 0;
+    
+}
+
+.menu-list {
+    list-style-type: none;
+}
+
+.menu-list li {
+    display: inline-block;
+    padding: 50px 25px;
+}
+
+.menu-list li:first-child {
+    margin-left: 0;
+}
+
+.menu-links {
+    color: #000000;
+    text-decoration: none;
+}
+.menu-link-cover:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    font-weight: 500;
+}
+.resume-lnk{
+    color: white;
+}
+
+.resume-btn{
+    padding: 10px 15px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: none;
+    border-style: none;
+}
+.resume-btn:hover{
+    background-color: var(--contrast);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.ham-open, .ham-close{
+    display: none;
+}
+#home-menu{
+    display: none;
+}
+
+
+/*--------- Hero styles --------------*/
+
+.hero-content{
+    background: var(--gradient);
+
+}
+.drop-down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.name{
+    color: var(--contrast);
+    text-decoration: none;
+}
+.see-more:hover{
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+
+/* ---------- About styles ----------- */
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.abt-container{
+    margin-top: 50px;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right:50px ;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--secondary-text-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul {
+    padding: 0;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 18px;
+}
+.tab-contents ul li span{
+    color: var(--secondary-text-color);
+    font-size: 16px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* Breakpoints */
+@media screen and (max-width:850px) {
+    .wrapper1{
+        padding: 50px 50px;
+    }
+}
+@media screen and (max-width:768px) {
+    .wrapper1{
+        padding: 50px 50px;
+    }
+    .about-col-1{
+        flex-basis: 45%;
+    }
+    .abt-container{
+        margin-top: 35px;
+    }
+    .about-col-2{
+        margin-top: 25px;
+        flex-basis: 100%;
+    }
+}
+@media screen and (max-width:425px) {
+    
+    .wrapper1{
+        padding: 50px 25px;
+    }
+    .abt-container{
+        margin-top: 25px;
+    }
+    .abt-text-p{
+        font-size: 14px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+}
+
+
+
+/* ------- Work styles ---------- */
+
+.work-card-links{
+    text-decoration: none;
+    color: #000;
+}
+.read-more{
+    color: var(--secondary-text-color);
+}
+.worklist{
+    margin-top: 50px;
+}
+.workcard{
+    border-style: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.hidden-card {
+    display: none;
+}
+.see-more{
+    text-align: center;
+}
+#see-more-btn{
+    border-style: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    background-color: #b0f3d4;
+    margin-top: 25px;
+}
+#see-more-btn:hover{
+    background-color: var(--secondary-text-color);
+}
+
+
+/* ------------ Work md page styles -----------*/
+
+.workmdimg{
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/*--------- Footer styles ---------*/
+
+.footer-content{
+    background: var(--gradient);
+}
+.footer-lnk{
+    text-decoration: none;
+}
+.footer-lnk:hover{
+    text-decoration: underline;
+}
+
+
+/*------------- Media queries ----------*/
+
+/* Large screens */
+
+@media screen and (max-width: 1024px ){
+    .workwrapper{
+        margin: 150px 150px 75px;
+    }
+}
+
+
+/* medium screens */
+
+@media only screen and (max-width: 768px) {
+
+    .workwrapper{
+        margin: 150px 75px 75px;
+    }
+    .herowrapper{
+        padding: 200px 75px 50px;
+    }
+    header {
+        right: 75px;
+    }
+    .txt1{
+        font-size: 300%;
+    }
+    .workmdimg{
+        height: 300px;
+    }
+ 
+}
+
+@media only screen and (max-width: 600px) {
+    .ham-open, .ham-close{
+        display: block;
+        font-size: 250%;
+    }
+    .menu-list{
+        background: var(--menu-background);
+        position: fixed;
+        top: 0;
+        right: -250px ;
+        width: 250px;
+        height: 100vh;
+        padding-left: 0;
+        padding-top: 125px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    .ham-open{
+        padding: 50px 0px ;
+    }
+    .menu-list li{
+        display: block;
+        padding: 25px 35px;
+    }
+    .ham-close{
+        position: absolute;
+        top: 50px;
+        left: 35px;
+        cursor: pointer;
+    }
+    .herowrapper{
+        padding: 175px 50px 35px;
+    }
+    header {
+        right: 50px;
+    }
+    .txt1{
+        font-size: 250%;
+    }
+    .txt2 {
+        font-size:175%;
+    }
+}
+
+/* small screens */
+@media only screen and (max-width: 500px) {
+    .txt1{
+        font-size: 225%;
+    }
+    .txt2 {
+        font-size: 150%;
+    }
+    .workwrapper{
+        margin: 150px 50px 75px;
+    }
+    .workmdimg{
+        height: 250px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .herowrapper{
+        padding: 150px 35px 35px;
+    }
+    header {
+        right: 35px;
+    }
+    .txt1{
+        font-size: 200%;
+    }
+    .txt2 {
+        font-size: 125%;
+    }
+    .workwrapper{
+        margin: 150px 25px 75px;
+    }
+}
+@media only screen and (max-width: 375px){
+    .txt1{
+        font-size: 150%;
+    }
+    .txt2 {
+        font-size: 105%;
+    }
+    .workmdimg{
+        height: 200px;
+    }
+}

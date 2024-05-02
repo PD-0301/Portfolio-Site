@@ -1,0 +1,53 @@
+<div id="myworks" class="mywork wrapper1">
+    <h1>Work</h1>
+    <div class="worklist">
+        <div class="fluid">
+            <div class="row g-3">
+              {% assign sorted_myworks = site.WORKS %}
+              {% for page in sorted_myworks %}
+                <div class="col-md-6 col-lg-4 g-3">
+                   <div class="card workcard">
+                      <img src="{{site.baseurl}}/assets/images/{{page.imgurl}}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                      <a href="{{site.url}}{{page.url | remove: '.html'}}" class="work-card-links"><h5 style="margin-bottom: 10px;" class="card-title">{{page.title | truncate: 35}}</h5></a>
+                      <a href="{{site.url}}{{page.url | remove: '.html'}}" class="work-card-links"><p style="margin-bottom: 15px;" class="card-text">{{page.description | truncate: 75}}</p></a>
+                      <a class="read-more" href="{{site.url}}{{page.url | remove: '.html'}}">Read more</a>
+                    </div>
+                   </div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="see-more">
+        <button id="see-more-btn">See more</button>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var workcards = document.querySelectorAll('.workcard');
+        var seeMoreBtn = document.getElementById('see-more-btn');
+
+        if (workcards.length <= 3) {
+            seeMoreBtn.style.display = 'none';
+        } else {
+            for (var i = 3; i < workcards.length; i++) {
+                workcards[i].classList.add('hidden-card');
+            }
+
+            seeMoreBtn.addEventListener('click', function() {
+                for (var i = 3; i < workcards.length; i++) {
+                    workcards[i].classList.toggle('hidden-card');
+                }
+
+                if (seeMoreBtn.textContent === 'See more') {
+                    seeMoreBtn.textContent = 'See less';
+                } else {
+                    seeMoreBtn.textContent = 'See more';
+                }
+            });
+        }
+    });
+</script>
