@@ -12,11 +12,19 @@ body {
 /*--------- root styles ----------------*/
 
 :root {
+    /* ---- sample Gradients and contrast colors you can use -------- */
+
     /* --gradient: linear-gradient(104.05deg, rgba(90, 121, 213, 0.624).31%, rgba(31, 89, 236, 0.196) 28.63%, rgba(122, 142, 221, 0.192)60.87%, rgba(255, 255, 255, 0) 100%); */
-    --gradient: linear-gradient(104.05deg, rgba(0, 255, 157, 0.624).31%, rgba(31, 236, 164, 0.196) 28.63%, rgba(122, 221, 175, 0.192) 60.87%, rgba(255, 255, 255, 0) 100%);
-    --contrast: #DA6092;
+    /* --gradient: linear-gradient(45deg, rgba(209, 178, 255, 1) 0%, rgba(255, 255, 255, 1) 100%); */
+    /* --contrast: #DA6092; */
+    /* --contrast: #0ccc8c; */
+
+    /* ---- You can experiment with the colours here ---- */
+    
+    --gradient: linear-gradient(104.05deg, rgba(0, 255, 157, 0.624).31%, rgba(31, 236, 164, 0.196) 28.63%, rgba(90, 204, 151, 0.192) 60.87%, rgba(230, 251, 242, 0.226) 100%);
+    --contrast: #069666;
     --secondary-text-color: #60DAA8;
-    --menu-background: #00ff91;
+    --menu-background: #242323fa;
 
 }
 
@@ -24,6 +32,9 @@ body {
 
 .wrapper1{
     padding: 50px 100px;
+}
+.wrapper2{
+    padding: 25px 100px 75px;
 }
 .herowrapper{
     padding: 200px 100px 50px;
@@ -171,7 +182,7 @@ header {
 
 .tab-titles{
     display: flex;
-    margin: 20px 0 40px;
+    margin: 20px 0 35px;
 }
 .tab-links{
     margin-right:50px ;
@@ -217,10 +228,16 @@ header {
     .wrapper1{
         padding: 50px 50px;
     }
+    .wrapper2{
+        padding: 0px 50px 75px ;
+    }
 }
 @media screen and (max-width:768px) {
     .wrapper1{
         padding: 50px 50px;
+    }
+    .wrapper2{
+        padding: 0px 50px 75px ;
     }
     .about-col-1{
         flex-basis: 45%;
@@ -229,6 +246,7 @@ header {
         margin-top: 35px;
     }
     .about-col-2{
+        padding-left: 12px;
         margin-top: 25px;
         flex-basis: 100%;
     }
@@ -237,6 +255,9 @@ header {
     
     .wrapper1{
         padding: 50px 25px;
+    }
+    .wrapper2{
+        padding: 0px 25px 75px ;
     }
     .abt-container{
         margin-top: 25px;
@@ -266,7 +287,7 @@ header {
     color: var(--secondary-text-color);
 }
 .worklist{
-    margin-top: 50px;
+    margin-top: 35px;
 }
 .workcard{
     border-style: none;
@@ -346,6 +367,7 @@ header {
     .workmdimg{
         height: 300px;
     }
+
  
 }
 
@@ -366,6 +388,13 @@ header {
         z-index: 2;
         transition: right 0.5s;
     }
+    .ham-close{
+        color: #fff;
+    }
+    .menu-links{
+        color: #fff;
+    }
+
     .ham-open{
         padding: 50px 0px ;
     }
