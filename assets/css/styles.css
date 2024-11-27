@@ -14,16 +14,16 @@ body {
 :root {
     /* ---- sample Gradients and contrast colors you can use -------- */
 
-    /* --gradient: linear-gradient(104.05deg, rgba(90, 121, 213, 0.624).31%, rgba(31, 89, 236, 0.196) 28.63%, rgba(122, 142, 221, 0.192)60.87%, rgba(255, 255, 255, 0) 100%); */
-    /* --gradient: linear-gradient(45deg, rgba(209, 178, 255, 1) 0%, rgba(255, 255, 255, 1) 100%); */
-    /* --contrast: #DA6092; */
-    /* --contrast: #0ccc8c; */
+     /* --gradient: linear-gradient(104.05deg, rgba(90, 121, 213, 0.624).31%, rgba(31, 89, 236, 0.196) 28.63%, rgba(122, 142, 221, 0.192)60.87%, rgba(255, 255, 255, 0) 100%); */
+     --gradient: linear-gradient(45deg, rgba(209, 178, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+     /* --contrast: #DA6092;  */
+     --contrast: #0ccc8c; 
 
     /* ---- You can experiment with the colours here ---- */
     
-    --gradient: linear-gradient(104.05deg, rgba(0, 255, 157, 0.624).31%, rgba(31, 236, 164, 0.196) 28.63%, rgba(90, 204, 151, 0.192) 60.87%, rgba(230, 251, 242, 0.226) 100%);
-    --contrast: #069666;
-    --secondary-text-color: #60DAA8;
+   /* --gradient: linear-gradient(104.05deg, rgba(0, 255, 157, 0.624).31%, rgba(31, 236, 164, 0.196) 28.63%, rgba(90, 204, 151, 0.192) 60.87%, rgba(230, 251, 242, 0.226) 100%);
+    --contrast: #069666;*/
+    --secondary-text-color: #9b3872;
     --menu-background: #242323fa;
 
 }
